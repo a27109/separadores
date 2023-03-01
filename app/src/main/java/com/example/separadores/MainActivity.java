@@ -19,7 +19,12 @@ public class MainActivity extends AppCompatActivity {
         new TabLayoutMediator(tabLayout, viewPager,
                 new TabLayoutMediator.TabConfigurationStrategy() {
                     @Override public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                        tab.setText("Tab " + (position + 1));
+                        if (position == 0)
+                            tab.setText("Apresentação");
+                        else if (position == 1)
+                            tab.setText("Desenvolvimento");
+                        else
+                            tab.setText("Conversa");
                     }
                 }).attach();
     }

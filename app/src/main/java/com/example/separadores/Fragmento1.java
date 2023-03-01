@@ -49,15 +49,17 @@ public class Fragmento1 extends Fragment {
         // Inflate the layout for this fragment
         if (counter == 0)
             return inflater.inflate(R.layout.fragment_fragmento1, container, false);
-        else
+        else if (counter == 1)
             return inflater.inflate(R.layout.fragment_fragmento2, container, false);
+        else
+            return inflater.inflate(R.layout.fragment_fragmento3, container, false);
     }
-    @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    /*@Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.setBackgroundColor(ContextCompat.getColor(getContext(), COLOR_MAP[counter]));
         TextView textViewCounter = view.findViewById(R.id.tv_counter);
         textViewCounter.setText("Fragment No " + (counter+1));
-    }
+    }*/
 
 
 }
